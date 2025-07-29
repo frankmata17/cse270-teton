@@ -1,6 +1,4 @@
 # from django.shortcuts import render
-import time
-import random
 
 # Create your views here.
 from django.http import HttpResponse
@@ -45,10 +43,9 @@ response = """{
             "website":"http://ancientgrains.com/",
             "imageURL":"./images/directory-ancient-grains.jpg",
             "membershipLevel":"gold",
-            "adcopy":"Nestled in southeast Idaho at the 
-            foothills of the Grand Teton mountain range, we are a 
-            family-owned and operated farm and mill committed to
-            restoring ancient grains to the family dinner table."
+            "adcopy":"Nestled in southeast Idaho at the foothills of the Grand Teton "
+                     "mountain range, we are a family-owned and operated farm and "
+                     "mill committed to restoring ancient grains to the family dinner table."
         },
         {
             "name":"The Haunted Mill",
@@ -58,9 +55,9 @@ response = """{
             "website":"http://www.thehauntedmillinteton.com/",
             "imageURL":"./images/directory-haunted-mill.jpg",
             "membershipLevel":"silver",
-            "adcopy":"The Haunted Mill is the largest attraction 
-            of its kind in Eastern Idaho. The setting is an authentic, 
-            historic flour mill, which is the scene for many local legends."
+            "adcopy":"The Haunted Mill is the largest attraction of its kind in Eastern "
+                     "Idaho. The setting is an authentic, historic flour mill, which is "
+                     "the scene for many local legends."
         },
         {
             "name":"Pumk-n-patch",
@@ -90,9 +87,8 @@ response = """{
             "website":"https://www.facebook.com/people/Sho-Gun-Crafts/100050826085977/",
             "imageURL":"./images/directory-shogun-crafts.jpg",
             "membershipLevel":"silver",
-            "adcopy":"We are fabric store that has been 
-            serving the public for 10+ years. We offer services 
-            such as quilting and sewing."
+            "adcopy":"We are fabric store that has been serving the public for 10+ years. "
+                     "We offer services such as quilting and sewing."
         },
         {
             "name":"Teton Turf and Tree",
@@ -102,12 +98,11 @@ response = """{
             "website":"http://www.tetonturf.com/",
             "imageURL":"./images/directory-teton-turf.jpg",
             "membershipLevel":"gold",
-            "adcopy":"Growing quality sod since 1996, 
-            Teton Turf & Tree Farms is the premier Eastern Idaho 
-            sod farm supplier. Founder Kelly Baker started 
-            Teton Turf knowing that every property owner wants 
-            to take pride in a beautiful, green, healthy landscape."
-        }                
+            "adcopy":"Growing quality sod since 1996, Teton Turf & Tree Farms is the "
+                     "premier Eastern Idaho sod farm supplier. Founder Kelly Baker started "
+                     "Teton Turf knowing that every property owner wants to take pride in "
+                     "a beautiful, green, healthy landscape."
+        }
     ]
 }"""
 
