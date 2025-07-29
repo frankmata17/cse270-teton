@@ -101,11 +101,11 @@ response = """{
 }"""
 
 headers = {
-"Cross-Origin-Opener-Policy":"unsafe-none",
-'Access-Control-Allow-Origin':'*',
-'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept'
+    "Cross-Origin-Opener-Policy": "unsafe-none",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
 }
 
-def index(request):        
+
+def index(request):
     return HttpResponse(response, content_type="application/json", headers=headers)
-    
