@@ -1,0 +1,56 @@
+# Ignore virtual environments
+venv/
+env/
+ENV/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test and coverage reports
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.cache
+nosetests.xml
+*.log
+*.pot
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# VS Code settings
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# dotenv environment files
+.env
+.env.*
+
+# Pytest cache
+.pytest_cache/
