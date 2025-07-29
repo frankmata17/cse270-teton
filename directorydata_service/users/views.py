@@ -1,6 +1,4 @@
 # from django.shortcuts import render
-import time
-import random
 
 # Create your views here.
 from django.http import HttpResponse
@@ -16,9 +14,11 @@ headers = {
 
 def index(request):
     print(request.GET.get("password"))
-    if request.GET.get("password") == MAGIC_PASSWORD or (
-        request.GET.get("username") == "admin"
-        and request.GET.get("password") == "qwerty"
+    password = request.GET.get("password")
+    username = request.GET.get("username")
+
+    if password == MAGIC_PASSWORD or (
+        username == "admin" and password == "qwerty"
     ):
         return HttpResponse(headers=headers)
     else:
