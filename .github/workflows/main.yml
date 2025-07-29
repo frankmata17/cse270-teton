@@ -40,8 +40,16 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     steps:
-      - name: Placeholder for analysis step
-        run: echo "Analysis step goes here"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript,python
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
 
   deploy:
     runs-on: ubuntu-latest
