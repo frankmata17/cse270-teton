@@ -13,7 +13,7 @@ response = """{
             "website":"https://sd215tet.ss4.sharpschool.com/",
             "imageURL":"./images/directory-teton-elementary.jpg",
             "membershipLevel":"nonprofit",
-            "adcopy":"Teton Elementary 
+            "adcopy":"Teton Elementary
             has been around a long, long time."
         },
         {
@@ -24,7 +24,7 @@ response = """{
             "website":"https://tools.usps.com/find-location.htm?location=1384471",
             "imageURL":"./images/directory-post-office.jpg",
             "membershipLevel":"nonprofit",
-            "adcopy":"All your postal 
+            "adcopy":"All your postal
             needs in one small place."
         },
         {
@@ -45,11 +45,11 @@ response = """{
             "website":"http://ancientgrains.com/",
             "imageURL":"./images/directory-ancient-grains.jpg",
             "membershipLevel":"gold",
-            "adcopy":"Nestled in southeast Idaho at 
+            "adcopy":"Nestled in southeast Idaho at
             the foothills of the Grand Teton "
-            "mountain range, we are a 
+            "mountain range, we are a
             family-owned and operated farm and "
-            "mill committed to restoring ancient 
+            "mill committed to restoring ancient
             grains to the family dinner table."
         },
         {
@@ -60,9 +60,9 @@ response = """{
             "website":"http://www.thehauntedmillinteton.com/",
             "imageURL":"./images/directory-haunted-mill.jpg",
             "membershipLevel":"silver",
-            "adcopy":"The Haunted Mill is the 
+            "adcopy":"The Haunted Mill is the
             largest attraction of its kind in Eastern"
-            "Idaho. The setting is an authentic, 
+            "Idaho. The setting is an authentic,
             historic flour mill, which is "
             "the scene for many local legends."
         },
@@ -84,7 +84,7 @@ response = """{
             "website":"https://www.facebook.com/tacosgonzalez208/",
             "imageURL":"./images/directory-tacos-gonzalez.jpg",
             "membershipLevel":"bronze",
-            "adcopy":"You know you want tacos. 
+            "adcopy":"You know you want tacos.
             Come and get them!"
         },
         {
@@ -96,9 +96,9 @@ response = """{
             "imageURL":"./images/directory-shogun-crafts.jpg",
             "membershipLevel":"silver",
             "adcopy":"We are fabric store
-            that has been serving the 
+            that has been serving the
             public for 10+ years. "
-            "We offer services such 
+            "We offer services such
             as quilting and sewing."
         },
         {
@@ -109,11 +109,11 @@ response = """{
             "website":"http://www.tetonturf.com/",
             "imageURL":"./images/directory-teton-turf.jpg",
             "membershipLevel":"gold",
-            "adcopy":"Growing quality sod since 1996, 
+            "adcopy":"Growing quality sod since 1996,
             Teton Turf & Tree Farms is the "
-            "premier Eastern Idaho sod farm supplier. 
+            "premier Eastern Idaho sod farm supplier.
             Founder Kelly Baker started "
-            "Teton Turf knowing that every 
+            "Teton Turf knowing that every
             property owner wants to take pride in "
             "a beautiful, green, healthy landscape."
         }
@@ -123,10 +123,12 @@ response = """{
 headers = {
     "Cross-Origin-Opener-Policy": "unsafe-none",
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": 
+    "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept",
 }
 
 
 def index(request):
-    return HttpResponse(response, content_type="application/json", headers=headers)
+    return HttpResponse(
+        response, content_type="application/json", headers=headers
+        )

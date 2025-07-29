@@ -8,7 +8,7 @@ MAGIC_PASSWORD = "CSE270Rocks!"
 headers = {
     "Cross-Origin-Opener-Policy": "unsafe-none",
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": 
+    "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept",
 }
 
