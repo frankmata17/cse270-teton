@@ -54,7 +54,10 @@ class TestSmokeTest:
     def test_smokehome(self):
         self.driver.get("http://127.0.0.1:62372/teton/1.6/index.html")
         self.driver.set_window_size(1157, 854)
-        elements = self.driver.find_elements(By.CSS_SELECTOR, ".header-logo img")
+        elements = self.driver.find_elements(
+          By.CSS_SELECTOR,
+          ".header-logo img"
+        )
         assert len(elements) > 0
         assert self.driver.find_element(
             By.CSS_SELECTOR, ".header-title > h1"
@@ -63,11 +66,16 @@ class TestSmokeTest:
             By.CSS_SELECTOR, ".header-title > h2"
         ).text == "Chamber of Commerce"
         assert self.driver.title == "Teton Idaho CoC"
-        elements = self.driver.find_elements(By.CSS_SELECTOR, ".spotlight1")
+        elements = self.driver.find_elements(
+          By.CSS_SELECTOR, ".spotlight1"
+          )
         assert len(elements) > 0
-        elements = self.driver.find_elements(By.LINK_TEXT, "Join Us")
+        elements = self.driver.find_elements(
+          By.LINK_TEXT, "Join Us"
+          )
         assert len(elements) > 0
-        self.driver.find_element(By.LINK_TEXT, "Join Us").click()
+        self.driver.find_element(
+          By.LINK_TEXT, "Join Us").click()
 
     def test_smokejoin(self):
         self.driver.get("http://127.0.0.1:62372/teton/1.6/index.html")
