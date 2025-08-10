@@ -7,21 +7,32 @@ class TestSmokeTest:
     def setup_method(self, method):
         options = webdriver.FirefoxOptions()
         options.add_argument("--headless")
-        self.driver = webdriver.Firefox(options=options)
+        self.driver = webdriver.Firefox(
+          options=options
+          )
         self.vars = {}
 
     def teardown_method(self, method):
         self.driver.quit()
 
     def test_smokeadmin(self):
-        self.driver.get("http://localhost:62372/teton/1.6/index.html")
+        self.driver.get(
+          "http://localhost:62372/teton/1.6/index.html"
+          )
         self.driver.set_window_size(1181, 875)
-        self.driver.find_element(By.LINK_TEXT, "Admin").click()
-        elements = self.driver.find_elements(By.ID, "username")
+        self.driver.find_element(
+          By.LINK_TEXT, "Admin"
+          ).click()
+        elements = self.driver.find_elements(
+          By.ID, "username"
+          )
         assert len(elements) > 0
-        self.driver.find_element(By.ID, "username").click()
-        self.driver.find_element(By.ID, "username").send_keys("frank")
-        self.driver.find_element(By.ID, "password").send_keys("mata")
+        self.driver.find_element(
+          By.ID, "username").click()
+        self.driver.find_element(
+          By.ID, "username").send_keys("frank")
+        self.driver.find_element(
+          By.ID, "password").send_keys("mata")
         self.driver.find_element(
             By.CSS_SELECTOR,
             ".mysubmit:nth-child(4)"
@@ -38,19 +49,31 @@ class TestSmokeTest:
         assert len(elements) > 0
 
     def test_smokedirectory(self):
-        self.driver.get("http://localhost:62372/teton/1.6/index.html")
+        self.driver.get(
+          "http://localhost:62372/teton/1.6/index.html"
+          )
         self.driver.set_window_size(1146, 875)
-        self.driver.find_element(By.LINK_TEXT, "Directory").click()
-        self.driver.find_element(By.ID, "directory-grid").click()
-        elements = self.driver.find_elements(By.ID, "directory-grid")
+        self.driver.find_element(
+          By.LINK_TEXT, "Directory"
+          ).click()
+        self.driver.find_element(
+          By.ID, "directory-grid"
+          ).click()
+        elements = self.driver.find_elements(
+          By.ID, "directory-grid"
+          )
         assert len(elements) > 0
         elements = self.driver.find_elements(
             By.CSS_SELECTOR,
             ".gold-member:nth-child(9) > p:nth-child(2)"
         )
         assert len(elements) > 0
-        self.driver.find_element(By.ID, "directory-list").click()
-        elements = self.driver.find_elements(By.ID, "directory-list")
+        self.driver.find_element(
+          By.ID, "directory-list"
+          ).click()
+        elements = self.driver.find_elements(
+          By.ID, "directory-list"
+          )
         assert len(elements) > 0
         elements = self.driver.find_elements(
             By.CSS_SELECTOR,
@@ -59,7 +82,9 @@ class TestSmokeTest:
         assert len(elements) > 0
 
     def test_smokehome(self):
-        self.driver.get("http://localhost:62372/teton/1.6/index.html")
+        self.driver.get(
+          "http://localhost:62372/teton/1.6/index.html"
+          )
         self.driver.set_window_size(1157, 854)
         elements = self.driver.find_elements(
             By.CSS_SELECTOR,
