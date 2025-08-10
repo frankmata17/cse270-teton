@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 class TestSmokeTest:
     def setup_method(self, method):
         options = webdriver.FirefoxOptions()
+        # Comment out the next line to run Firefox in normal (non-headless) mode for debugging
         options.add_argument("--headless")
         self.driver = webdriver.Firefox(options=options)
         self.vars = {}
@@ -14,7 +15,7 @@ class TestSmokeTest:
         self.driver.quit()
 
     def test_smokeadmin(self):
-        self.driver.get("http://127.0.0.1:62372/teton/1.6/index.html")
+        self.driver.get("http://localhost:62372/teton/1.6/index.html")
         self.driver.set_window_size(1181, 875)
         self.driver.find_element(By.LINK_TEXT, "Admin").click()
         elements = self.driver.find_elements(By.ID, "username")
@@ -33,7 +34,7 @@ class TestSmokeTest:
         assert len(elements) > 0
 
     def test_smokedirectory(self):
-        self.driver.get("http://127.0.0.1:62372/teton/1.6/index.html")
+        self.driver.get("http://localhost:62372/teton/1.6/index.html")
         self.driver.set_window_size(1146, 875)
         self.driver.find_element(By.LINK_TEXT, "Directory").click()
         self.driver.find_element(By.ID, "directory-grid").click()
@@ -52,7 +53,7 @@ class TestSmokeTest:
         assert len(elements) > 0
 
     def test_smokehome(self):
-        self.driver.get("http://127.0.0.1:62372/teton/1.6/index.html")
+        self.driver.get("http://localhost:62372/teton/1.6/index.html")
         self.driver.set_window_size(1157, 854)
         elements = self.driver.find_elements(
           By.CSS_SELECTOR,
@@ -78,7 +79,7 @@ class TestSmokeTest:
           By.LINK_TEXT, "Join Us").click()
 
     def test_smokejoin(self):
-        self.driver.get("http://127.0.0.1:62372/teton/1.6/index.html")
+        self.driver.get("http://localhost:62372/teton/1.6/index.html")
         self.driver.set_window_size(1165, 868)
         self.driver.find_element(By.LINK_TEXT, "Join").click()
         elements = self.driver.find_elements(By.NAME, "fname")
