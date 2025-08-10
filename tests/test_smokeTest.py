@@ -24,13 +24,18 @@ class TestSmokeTest:
         self.driver.find_element(By.ID, "username").send_keys("frank")
         self.driver.find_element(By.ID, "password").send_keys("mata")
         self.driver.find_element(
-            By.CSS_SELECTOR, ".mysubmit:nth-child(4)"
+            By.CSS_SELECTOR,
+            ".mysubmit:nth-child(4)"
         ).click()
         elements = self.driver.find_elements(
-            By.CSS_SELECTOR, ".mysubmit:nth-child(4)"
+            By.CSS_SELECTOR,
+            ".mysubmit:nth-child(4)"
         )
         assert len(elements) > 0
-        elements = self.driver.find_elements(By.CSS_SELECTOR, ".errorMessage")
+        elements = self.driver.find_elements(
+            By.CSS_SELECTOR,
+            ".errorMessage"
+        )
         assert len(elements) > 0
 
     def test_smokedirectory(self):
@@ -41,14 +46,16 @@ class TestSmokeTest:
         elements = self.driver.find_elements(By.ID, "directory-grid")
         assert len(elements) > 0
         elements = self.driver.find_elements(
-            By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)"
+            By.CSS_SELECTOR,
+            ".gold-member:nth-child(9) > p:nth-child(2)"
         )
         assert len(elements) > 0
         self.driver.find_element(By.ID, "directory-list").click()
         elements = self.driver.find_elements(By.ID, "directory-list")
         assert len(elements) > 0
         elements = self.driver.find_elements(
-            By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)"
+            By.CSS_SELECTOR,
+            ".gold-member:nth-child(9) > p:nth-child(2)"
         )
         assert len(elements) > 0
 
@@ -56,27 +63,33 @@ class TestSmokeTest:
         self.driver.get("http://localhost:62372/teton/1.6/index.html")
         self.driver.set_window_size(1157, 854)
         elements = self.driver.find_elements(
-          By.CSS_SELECTOR,
-          ".header-logo img"
+            By.CSS_SELECTOR,
+            ".header-logo img"
         )
         assert len(elements) > 0
         assert self.driver.find_element(
-            By.CSS_SELECTOR, ".header-title > h1"
+            By.CSS_SELECTOR,
+            ".header-title > h1"
         ).text == "Teton Idaho"
         assert self.driver.find_element(
-            By.CSS_SELECTOR, ".header-title > h2"
+            By.CSS_SELECTOR,
+            ".header-title > h2"
         ).text == "Chamber of Commerce"
         assert self.driver.title == "Teton Idaho CoC"
         elements = self.driver.find_elements(
-          By.CSS_SELECTOR, ".spotlight1"
-          )
+            By.CSS_SELECTOR,
+            ".spotlight1"
+        )
         assert len(elements) > 0
         elements = self.driver.find_elements(
-          By.LINK_TEXT, "Join Us"
-          )
+            By.LINK_TEXT,
+            "Join Us"
+        )
         assert len(elements) > 0
         self.driver.find_element(
-          By.LINK_TEXT, "Join Us").click()
+            By.LINK_TEXT,
+            "Join Us"
+        ).click()
 
     def test_smokejoin(self):
         self.driver.get("http://localhost:62372/teton/1.6/index.html")
