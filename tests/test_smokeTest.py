@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 class TestSmokeTest:
     def setup_method(self, method):
         options = webdriver.FirefoxOptions()
-        # Comment out the next line to run Firefox in normal (non-headless) mode for debugging
         options.add_argument("--headless")
         self.driver = webdriver.Firefox(options=options)
         self.vars = {}
